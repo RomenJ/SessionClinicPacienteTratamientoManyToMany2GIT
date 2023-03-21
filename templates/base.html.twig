@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+
+        <style>
+
+    .Cabecera_Header{
+                
+            
+                background: linear-gradient(90deg, rgba(51,60,135,1) 0%, rgba(18,37,98,1) 52%, rgba(51,60,135,1) 96%);              
+                color:white;
+                height: 200px;
+                width: 100%;
+                padding-left: 30px;
+                font-size: 2em;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left:50x;
+                border-radius:20px;
+
+            }
+
+
+            .Cabecera_Header > a > h1{
+
+                      color:white;
+            }
+        </style>
+    </head>
+    <body>
+   <div class="Cabecera_Header"> <a href="{{ path('app_home') }}"> <h1> App de Tratamientos, Pacientes y tratamientos aplicados a pacientes   </h1></a></div>
+    
+        {% block body %}{% endblock %}
+    </body>
+</html>
