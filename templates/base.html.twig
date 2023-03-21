@@ -34,14 +34,24 @@
 
 
             .Cabecera_Header > a > h1{
-
                       color:white;
+            }
+            .basicMargin{
+
+                padding-left: 30px;
+                padding-right: 30px;
+                margin-right: 30px;
+                margin-left: 30px;
+
             }
         </style>
     </head>
     <body>
    <div class="Cabecera_Header"> <a href="{{ path('app_home') }}"> <h1> App de Tratamientos, Pacientes y tratamientos aplicados a pacientes   </h1></a></div>
     
+    <div class="basicMargin">
         {% block body %}{% endblock %}
+
+        </div>
     </body>
 </html>
